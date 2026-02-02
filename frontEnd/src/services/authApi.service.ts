@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://mu-login-appp.onrender.com';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://login-app-6-bc9e.onrender.com';
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
