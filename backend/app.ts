@@ -6,6 +6,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const DEFAULT_ORIGINS = [
   "https://loginapp554.netlify.app",
+  "https://loginappp45.netlify.app",
   "https://spontaneous-speculoos-458684.netlify.app",
   "http://localhost:5173",
   "http://localhost:5174",
