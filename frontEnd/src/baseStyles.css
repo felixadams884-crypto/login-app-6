@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --auth-primary: var(--auth-accent, #0b57d0);
+  --auth-primary-hover: #1967d2;
+  --auth-accent: rgb(168 199 250 / 1);
+  --auth-text: #202124;
+  --auth-muted: #5f6368;
+  --auth-border: #dadce0;
+  --auth-radius: 12px;
+  --auth-shadow: 0 2px 6px rgba(60, 64, 67, 0.12);
+
+  --primary-color: var(--auth-accent, #0b57d0);
+  --primary-hover: #1669d6;
+  --text-color: #202124;
+  --muted-color: #5f6368;
+  --border-color: #dadce0;
+  --card-radius: 12px;
+  --shadow: 0 6px 16px rgba(60, 64, 67, 0.15);
+
+  font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", "Noto Sans Khmer", arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f7fafc;
+  font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", "Noto Sans Khmer", arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

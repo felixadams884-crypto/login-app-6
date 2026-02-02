@@ -1,0 +1,79 @@
+.authFlowDashboardContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+}
+
+.authFlowDashboardCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.authFlowDashboardTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.authFlowDashboardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.authFlowDashboardUserInfo {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.authFlowDashboardUserInfoTitle {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.authFlowDashboardUserInfoText {
+  color: #4a5568;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.authFlowDashboardUserInfoStrong {
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.authFlowDashboardLogoutButton {
+  background: #f56565;
+  color: white;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.authFlowDashboardLogoutButton:hover {
+  background: #e53e3e;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(245, 101, 101, 0.4);
+}
+
+.authFlowDashboardLogoutButton:active {
+  transform: translateY(0);
+}

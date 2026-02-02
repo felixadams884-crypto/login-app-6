@@ -1,0 +1,77 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: rgb(14 14 14 / 1);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 44px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.logoMark {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-color);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  border: 1px solid #e0e0e0;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0;
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 15px;
+}
+
+.emailHint {
+  margin: 0;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 32px 24px;
+  }
+}
