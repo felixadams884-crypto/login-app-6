@@ -34,7 +34,7 @@ export const AppAuthProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
         // Try to verify if there's an active session
         // This endpoint should return 200 if session is valid, or appropriate error if expired
-        const response = await fetch('http://localhost:4000/api/auth/check-session', {
+        const response = await fetch('https://login-app-6-ibwi.onrender.com/api/auth/check-session', {
           method: 'GET',
           credentials: 'include',
           headers: {
