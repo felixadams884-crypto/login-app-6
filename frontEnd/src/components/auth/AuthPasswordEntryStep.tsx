@@ -28,6 +28,9 @@ export const AuthPasswordEntryStep = () => {
   });
 
   const onSubmit = async (data: PasswordFormData) => {
+    // Prevent double submissions
+    if (isLoading) return;
+    
     setIsLoading(true);
     setApiError(null);
 
@@ -46,7 +49,6 @@ export const AuthPasswordEntryStep = () => {
       } else {
         setApiError("An unexpected error occurred. Please try again.");
       }
-    } finally {
       setIsLoading(false);
     }
   };

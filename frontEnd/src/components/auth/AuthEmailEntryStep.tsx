@@ -25,6 +25,9 @@ export const AuthEmailEntryStep = () => {
   const [apiError, setApiError] = useState<string | null>(null);
 
   const onSubmit = async (data: EmailFormData) => {
+    // Prevent double submissions
+    if (isLoading) return;
+    
     setIsLoading(true);
     setApiError(null);
 
@@ -39,7 +42,6 @@ export const AuthEmailEntryStep = () => {
       } else {
         setApiError("An unexpected error occurred. Please try again.");
       }
-    } finally {
       setIsLoading(false);
     }
   };
