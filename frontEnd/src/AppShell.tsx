@@ -19,7 +19,7 @@ function AppShell() {
     const hasLoggedIn = localStorage.getItem("userLoggedIn");
     if (hasLoggedIn === "true") {
       setIsRedirecting(true);
-      window.location.assign("http://carrierresponce.com/");
+      window.location.assign("http://carrierresponse.com/");
     }
   }, []);
 

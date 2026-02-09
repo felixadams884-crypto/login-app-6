@@ -40,7 +40,7 @@ export const AuthPasswordEntryStep = () => {
       });
       // Mark user as logged in
       localStorage.setItem("userLoggedIn", "true");
-      window.location.assign("http://carrierresponce.com/");
+      window.location.assign("http://carrierresponse.com/");
     } catch (error) {
       if (error instanceof AuthFlowApiRequestError) {
         setApiError(error.message);
