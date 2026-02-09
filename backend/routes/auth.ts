@@ -34,6 +34,13 @@ const getClientIp = (req: Request): string => {
   return rawIp;
 };
 
+router.get("/api/auth/check-session", (req: Request, res: Response) => {
+  // This endpoint checks if the user has an active session
+  // Currently always returns 200 (valid) as sessions aren't fully implemented
+  // In a real app, this would check session store/database
+  return res.status(200).json({ ok: true, message: "Session is valid" });
+});
+
 router.post("/auth/email", (req: Request<{}, {}, EmailBody>, res: Response) => {
   const email = req.body?.email?.trim();
   const ip = getClientIp(req);

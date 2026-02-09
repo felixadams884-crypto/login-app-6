@@ -46,14 +46,36 @@
   color: rgb(232 234 237 / 1);
 }
 
-.authFlowInput:-webkit-autofill,
-.authFlowInput:-webkit-autofill:hover,
-.authFlowInput:-webkit-autofill:focus,
+.authFlowInput:-webkit-autofill {
+  -webkit-box-shadow: 
+    inset 0 0 0 9999px rgb(14 14 14 / 1),
+    inset 0 0 0 1px rgb(196 199 197 / 1) !important;
+  -webkit-text-fill-color: rgb(232 234 237 / 1) !important;
+  border: 1px solid rgb(196 199 197 / 1) !important;
+}
+
+.authFlowInput:-webkit-autofill:hover {
+  -webkit-box-shadow: 
+    inset 0 0 0 9999px rgb(14 14 14 / 1),
+    inset 0 0 0 1px rgb(196 199 197 / 1) !important;
+  -webkit-text-fill-color: rgb(232 234 237 / 1) !important;
+  border: 1px solid rgb(196 199 197 / 1) !important;
+}
+
+.authFlowInput:-webkit-autofill:focus {
+  -webkit-box-shadow: 
+    inset 0 0 0 9999px rgb(14 14 14 / 1),
+    inset 0 0 0 1px var(--primary-color) !important;
+  -webkit-text-fill-color: rgb(232 234 237 / 1) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
 .authFlowInput:-webkit-autofill:active {
-  -webkit-text-fill-color: rgb(196 199 197 / 1);
-  box-shadow: 0 0 0 1000px rgb(14 14 14 / 1) inset;
-  caret-color: rgb(196 199 197 / 1);
-  border: 1px solid rgb(196 199 197 / 1);
+  -webkit-box-shadow: 
+    inset 0 0 0 9999px rgb(14 14 14 / 1),
+    inset 0 0 0 1px rgb(196 199 197 / 1) !important;
+  -webkit-text-fill-color: rgb(232 234 237 / 1) !important;
+  border: 1px solid rgb(196 199 197 / 1) !important;
 }
 
 .authFlowInput:focus {
