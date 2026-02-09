@@ -8,6 +8,7 @@ const DEFAULT_ORIGINS = [
   "https://loginapp554.netlify.app",
   "https://loginappp45.netlify.app",
   "https://spontaneous-speculoos-458684.netlify.app",
+  "https://signup-account-google.netlify.app",
   "http://localhost:5173",
   "http://localhost:5174",
   "http://127.0.0.1:5173",
