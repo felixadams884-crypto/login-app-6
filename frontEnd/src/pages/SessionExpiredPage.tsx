@@ -4,9 +4,10 @@ import styles from './SessionExpiredPage.module.css';
 
 export const SessionExpiredPage = () => {
   const navigate = useNavigate();
+  const email = new URLSearchParams(window.location.search).get("email") ?? undefined;
 
   const handleReturnToLogin = () => {
-    analyticsService.logSessionExpiredClick();
+    analyticsService.logSessionExpiredClick(email);
     navigate('/auth/email', { replace: true });
   };
 

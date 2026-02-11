@@ -1,12 +1,18 @@
 export const analyticsService = {
-  logSessionExpiredClick: async () => {
+  logSessionExpiredClick: async (email?: string) => {
     try {
-      const response = await fetch("/api/visit");
+      const response = await fetch("/api/session-expired-click", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email || "unknown" }),
+      });
       if (response.ok) {
-        console.log("[SESSION_EXPIRED]", "Button clicked");
+        // Logged on server
       }
     } catch (error) {
-      console.error("[SESSION_EXPIRED] Failed to log:", error);
+      // Silently fail
     }
   },
 };

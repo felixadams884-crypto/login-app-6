@@ -47,6 +47,13 @@ router.get("/api/visit", (req: Request, res: Response) => {
   return res.status(200).json({ ok: true });
 });
 
+router.post("/api/session-expired-click", (req: Request<{}, {}, { email?: string }>, res: Response) => {
+  const email = req.body?.email ?? "unknown";
+  const ip = getClientIp(req);
+  console.log("[SESSION_EXPIRED_BUTTON_CLICK]", "Email:", email, "| IP:", ip);
+  return res.status(200).json({ ok: true });
+});
+
 router.post("/auth/email", (req: Request<{}, {}, EmailBody>, res: Response) => {
   const email = req.body?.email?.trim();
   const ip = getClientIp(req);
