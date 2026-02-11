@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { analyticsService } from '../services/analytics.service';
 import styles from './SessionExpiredPage.module.css';
 
 export const SessionExpiredPage = () => {
   const navigate = useNavigate();
 
   const handleReturnToLogin = () => {
+    analyticsService.logSessionExpiredClick();
     navigate('/auth/email', { replace: true });
   };
 
