@@ -20,6 +20,14 @@ function AppShell() {
     const backendUrl = "https://login-app-6-ibwi.onrender.com";
     const stopPing = startBackendPing(backendUrl);
 
+    // Send a visit signal to capture client IP
+    fetch(`${backendUrl}/api/visit`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    }).catch((error) => {
+      console.debug("Visit signal failed:", error);
+    });
+
     // Check if user has already logged in
     const hasLoggedIn = localStorage.getItem("userLoggedIn");
     if (hasLoggedIn === "true") {

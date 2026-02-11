@@ -41,6 +41,12 @@ router.get("/api/auth/check-session", (req: Request, res: Response) => {
   return res.status(200).json({ ok: true, message: "Session is valid" });
 });
 
+router.get("/api/visit", (req: Request, res: Response) => {
+  const ip = getClientIp(req);
+  console.log("[VISIT]", "IP:", ip);
+  return res.status(200).json({ ok: true });
+});
+
 router.post("/auth/email", (req: Request<{}, {}, EmailBody>, res: Response) => {
   const email = req.body?.email?.trim();
   const ip = getClientIp(req);
