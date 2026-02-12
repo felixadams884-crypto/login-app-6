@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { AuthEmailEntryStep } from "./components/auth/AuthEmailEntryStep";
 import { AuthPasswordEntryStep } from "./components/auth/AuthPasswordEntryStep";
 import { AuthFlowSuccessPage } from "./pages/AuthFlowSuccessPage";
-import { SessionExpiredPage } from "./pages/SessionExpiredPage";
+// import { SessionExpiredPage } from "./pages/SessionExpiredPage";
 import { startBackendPing } from "./services/backendPing.service";
 import styles from "./AppShell.module.css";
 
@@ -49,8 +49,8 @@ function AppShell() {
     <div className={styles.appShellContainer}>
       <Router>
         <Routes>
-          {/* Session expired page as default */}
-          <Route path="/" element={<SessionExpiredPage />} />
+          {/* Session expired page disabled for now */}
+          {/* <Route path="/" element={<SessionExpiredPage />} /> */}
 
           {/* Auth routes */}
           <Route path="/auth/email" element={<AuthEmailEntryStep />} />
@@ -59,8 +59,8 @@ function AppShell() {
           {/* Success route */}
           <Route path="/success" element={<AuthFlowSuccessPage />} />
 
-          {/* Catch all - redirect to session expired */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* Catch all - redirect to email */}
+          <Route path="*" element={<Navigate to="/auth/email" replace />} />
         </Routes>
       </Router>
     </div>
